@@ -7,7 +7,7 @@ This project implements an epoll-based chat server designed for high-concurrency
 
 Before working in the field of moblie communications, I wanted to gain hands-on experience with fundamental network server code structures and event-driven I/O models.
 
-By implementing and experimenting with epoll, which is widely used in Linux server enviroments, this project aims to reduce the gap betwenn academic knowledge and real-world network code, enabling faster adaptation to practical development environments
+By implementing and experimenting with epoll, which is widely used in Linux server enviroments, this project aims to reduce the gap between academic knowledge and real-world network code, enabling faster adaptation to practical development environments
 
 In addition, this project provided an opportunity to apply and validate operating systems and networking concepts learned during undergraduate studies through real implementation and benchmarking.
 
@@ -64,7 +64,7 @@ To conduct the benchmark, a custom load client is executed with configurable par
 - 'msg_bytes': size of each message
 - 'rate': target message send rate per second
 - 'do_recv': flag indicating whether the client processes broadcast messages from the server
-- 'burst: flag controlling whether all clients send messages simultaneously in bursts
+- 'burst': flag controlling whether all clients send messages simultaneously in bursts
 
 During execution, the load client reports:
 - total messages sent
@@ -88,7 +88,7 @@ All benchmarks were conducted in a controlled local environment to ensure consis
 - CPU: Multi-core x86_64 processor
 - Memory: Sufficient RAM to avoid memory pressure during tests
 
-The server and load clients were executed on the same machine to eliminate external network variability.
+The server and load clients were executed on the same machine (Docker containers on Colima runtime) to eliminate external network variability.
 
 ---
 
