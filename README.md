@@ -202,3 +202,26 @@ This benchmark was designed to isolate and compare the behavioral differences be
 - Run benchmarks across separate hosts or physical network interfaces to evaluate the impact of real network conditions.
 
 - Explore additional workloads, including receive-heavy and asymmetric traffic patterns, to better understand ET/LT behavior under diverse application scenarios.
+
+
+## Build
+
+This project is implemented in C and can be compiled using 'gcc'.
+
+### Build the server
+
+'''bash
+gcc -O2 -Wall -Iinclude \
+  src/chatserver_main.c \
+  src/chat_logic.c \
+  src/netutil.c \
+  src/sock_list.c \
+  -o chat_server
+
+### Build the normal chat client
+
+gcc -O2 -Wall tools/clientchatserver.c -o chat_client
+
+### Build the load test client
+
+gcc -O2 -Wall tools/load_client.c -o load_client
