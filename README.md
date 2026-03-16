@@ -247,4 +247,18 @@ gcc -O2 -Wall tools/load_client.c -o load_client
    ./chat_client
 
 4. Run the load_client
-   ./load_client
+   ./load_client srv_et 9000
+
+Example bechmark run:
+  ./load_client srv_et 9000 500 20 256 50 0 1
+
+
+## Tools
+
+The 'tools/' directory contains helper clients used during development and benchmarking.
+
+- 'clientchatserver.c'
+  A simple interactive chat client used for manual testing of the server.
+
+- 'load_client.c'
+  A load generation client used to simulate mutiple concurrent connection and measure server throughput during bechmarking.
