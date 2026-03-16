@@ -225,3 +225,26 @@ gcc -O2 -Wall tools/clientchatserver.c -o chat_client
 ### Build the load test client
 
 gcc -O2 -Wall tools/load_client.c -o load_client
+
+## Quick Start
+
+1. Build all binaries
+   gcc -O2 -Wall -Iinclude \
+     src/chatserver_main.c \
+     src/chat_logic.c \
+     src/netutil.c \
+     src/sock_list.c \
+     -o chat_server
+
+   gcc -O2 -Wall tools/clientchatserver.c -o chat_client
+
+   gcc -O2 -Wall tools/load_client.c -o load_client
+
+2. Run the server
+   ./chat_server 9000
+
+3. Run the interactive client
+   ./chat_client
+
+4. Run the load_client
+   ./load_client
